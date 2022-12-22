@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\allgemein.css"><!--Css-Link für allgemeine Informationen auf der ganzen Seite-->
+    <link rel="stylesheet" href="..\css\menu.css"><!--Css-Link fürs Hauptmenü-->
+    <link rel="stylesheet" href="..\css\footer.css"><!--Css-Link für den Footer-->
+    <link rel="stylesheet" href="..\css\hilfe.css"><!--Css-Link für den individuellen Hauptteil der Seite-->
+    <link rel="stylesheet" href="..\css\search.css"><!--Css-Link für den Stil der Suche und der Box-->
+    <title>Lateinmaus - Hilfe</title>
+    <link rel="icon" type="image/x-icon" href="..\images\favicon.ico"><!--Favicon-->
+    <script defer src="..\js\search.js"></script><!--Js-Link für Suche-->
+    <script defer src="..\js\allgemein.js"></script>
+    <script defer src="..\js\menu.js"></script>
+    <script defer src="..\js\numberofNewsandAppointments.js"></script>
+  </head>
+<body onload="normalDatum()">
+  <!--Noscript-->
+<noscript id="noScriptConfirmBox">⚠JavaScript ist deaktiviert. Bitte JavaScript aktivieren, um diese Seite normal benutzen zu können!⚠<br><a href="https://praxistipps.chip.de/wie-aktiviere-ich-javascript-und-was-bedeutet-das_9745">»Aktivieren(Anleitung)</a></noscript>
+   <!--Hier beginnt das Hauptmenu, für das der Css-Link im head zuständig ist-->
+   <nav id="normalMenu">
+    <a href="..\index.html" title="Home"><img src="..\images\logo.jpg" alt="Logo" id="logolm"></a>
+    <a href="javascript:void(0)" title="Lerninhalte" id="lerninhalte">Lerninhalte</a>
+    <a href="..\html\news.html" title="News" id="news">News</a>
+    <a href="..\html\termine.html" title="Termine" id="termine">Termine</a>
+    <a href="..\html\login.html" title="Login"><img id="loginButton" src="..\images\login.png"></a>
+    <button id="menusearchButton"  onclick="showAlertBox()" title="Suche">🔍</button>
+</nav>
+<div id="lerninhalteContent">
+<a href="..\html\englisch.html" class="lerninhalte">Englisch</a>
+<a href="..\html\spanisch.html" class="lerninhalte">Spanisch</a>
+<a href="..\html\latein.html" class="lerninhalte">Latein</a>
+<a href="..\html\chemie.html" class="lerninhalte">Chemie</a>
+</div>
+
+<nav id="mobileMenu">
+<a href="..\index.html" title="Home"><img src="..\images\logo.jpg" id="mobilelogolm"></a>
+<a href="..\html\login.html" title="Login"><img id="mobileloginButton" src="..\images\login.png"></a>
+<button id="mobilesearchButton" onclick="showAlertBox()">🔍</button>
+<button id="showMobileMenuButton">&#x2630;</button>
+</nav>
+<div id="mobileMenuContent">
+<h3 id="menüText">MENÜ</h3>
+<h4 class="mobileMenu">Lerninhalte</h4>
+<ul>
+        <li><a href="..\html\englisch.html" class="mobileLerninhalte">Englisch</a></li>
+        <li><a href="..\html\spanisch.html" class="mobileLerninhalte">Spanisch</a></li>
+        <li><a href="..\html\latein.html" class="mobileLerninhalte">Latein</a></li>
+        <li><a href="..\html\chemie.html" class="mobileLerninhalte">Chemie</a></li>
+</ul>
+<a href="..\html\news.html" id="mobileNews" class="mobileMenu">News<font id="showNumberOfNews"></font></a>
+<a href="..\html\termine.html" id="mobileAppointments" class="mobileMenu">Termine<font id="showNumberOfAppointments"></font></a>
+<a href="..\html\impressum.html" id="mobileImpressum" class="mobileMenu">Impressum</a>
+<a href="..\html\hilfe.html" id="mobileHelp" class="mobileMenu">Hilfe</a>
+<a href="https://lateinmausgruppe.netlify.app#about-us" id="mobileAboutUs" class="mobileMenu">Über uns</a>
+</div>
+<div id="alertBox">
+  <input type="button" id="closeBox" onclick="closeAlertBox()" value="X">
+  <input type="search" name="search" id="search" placeholder="Suchbegriff" value="1"><br>
+  <input type="button" id="searchButton" onclick="search()" value="&#128269;Suchen">
+  <center><p id="alternativeAlert"></p></center>
+</div>
+<div id="backCanvas"></div>
+    <!--Hier beginnt der individuelle Hauptteil der Seite, für den der Css-Link im head zuständig ist-->
+    <div id="main">
+      <br><br><br>
+      <section id="hilfe">
+        <h2>Hilfe</h2>
+        <p>
+          <h5>Allgemein:</h5>
+          <ul>
+            <li><strong>Zurück zur Startseite:</strong> Den Menu-Punkt <q><a href="..\index.html">Home(Lateinmaus-Logo)</a></q> wählen oder unten auf <q>2022 Lateinmaus</q> klicken.</li>
+            <li><strong>Von externen Seiten wieder zurückfinden:</strong> So oft auf die Zurück-Taste drücken, bis die zuletzt aufgerufene LATEINMAUS-Seite erscheint.</li>
+            <li><strong>Bei Fragen:</strong> Bei Fragen kannst du dich sehr gerne an mich via WhatsApp, E-Mail, Nachricht oder Telefon wenden.</li>
+            <li><strong>Auftretende(r) Fehler:</strong>
+              <ol>
+                <li>Internetverbindung überprüfen</li>
+                <li>Seite aktualisieren</li>
+                <li>Seite verlassen und erneut versuchen</li>
+                <li>5-10 Minuten warten und erneut versuchen</li>
+                <li>Bild von Fehler und Fehlerbeschreibung per E-Mail/ WhatsApp/ Nachricht mir zusenden. <br>Ich werde mich so bald als möglich darum kümmern (<b>Öffnungszeiten Technischer Support</b>: Montag - Freitag 14.00-21.00 Uhr, Samstag und Sonntag 19.00-21.00Uhr)</li>
+              </ol>
+            </li>
+          </ul>
+        </p>
+        <p>
+          <h5>Interner Lateinmaus-Bereich:</h5>
+          <ul>
+            <li><strong>Impressum</strong> Im Footer-Menüpunkt <q><a href="..\html\impressum.html">Impressum:</a></q> kann ein <b>UN</b>echtes Impressum angesehen werden.</li>
+            <li><strong>Stand</strong> Im Footer-Menüpunkt <q><a href="..\html\stand.html">Stand:</a></q> wird die aktuelle Version sowie das Datum, wann die Seite zuletzt aktualisiert wurde, angegeben.</li>
+            <li><strong>Lerninhalte nach Fächern:</strong> <q>Lerninhalte</q> ist der wichtigste Menüpunkt. Dieser besteht aus den Unterseiten <q><a href="..\html\latein.html">Latein</a></q>, <q><a href="..\html\englisch.html">Englisch</a></q>, <q><a href="..\html\spanisch.html">Spanisch</a></q> und <q><a href="..\html\chemie.html">Chemie</a></q>. Die Unterseiten bieten eine Vielzahl an Online-Übungen und weiteren Funktionalitäten:
+              <ul>
+                <li><strong>Latein:</strong> Das Themengebiet Latein bietet einige Funktionen: Eine <a href="..\html\lateingrammatik.html">Online-Lateingrammatik</a>, die meist <u>knapp</u> die wichtigsten Grammatikthemen behandelt, Online-Übungen mit mehreren hundert Übungen zu den Bereichen Wortschatz und Grammatik (6./7./8. Jahrgangsstufe), die jeweils aktuelle Hausaufgabe, Lösung Texte mit der Lösung des aktuellen Lateintextes (nur für eingeloggte Benutzer), <a href="https://hermeneus.eu">Hermeneus</a>, einem sehr nützlichen Tool zur Übersetzung lateinischer Texte (benötigt Code), und einem Link zu <a href="https://www.navigium.de/latein-woerterbuch.html">Navigium</a>(Lateinwörterbuch).</li>
+                <li><strong>Englisch:</strong> Englisch bietet derzeit drei Funktionen: „Homework“, unter der die aktuelle Hausaufgabe aus dem Fach Englisch eingetragen wird, „Online-Übungen“ mit zahlreichen Übungen mit Fokus auf den Wortschatz der Jahrgangstufen 5 bis 9, und einem Wörterbuch.</li>
+                <li><strong>Spanisch:</strong> Spanisch bietet zurzeit die Funktionen „Wörterbuch“ und „Online-Übungen“.</li>
+                <li><strong>Chemie:</strong> Chemie bietet zurzeit die Funktion „Online-Übungen“.</li>
+              </ul>
+            </li>
+            <li><strong>News:</strong> Unter dem Menüpunkt <q><a href="..\html\news.html">News</a></q> kannst du von mir auf der Seite veröffentlichte Neuigkeiten rund um die Lateinmaus und den Unterricht abrufen und lesen. Eventuell sind dort auch herunterladbare Dokumente wie z.B. Hausaufgabengutscheine enthalten.</li>
+            <li><strong>Termine:</strong> Unter dem Menüpunkt <q><a href="..\html\termine.html">Termine</a></q> findest du alle bisherigen Termine (seit Beginn des Monats) in grauer Schrift sowie zukünftige Termine wie Schulaufgaben in normaler Schriftfarbe. Der Inhalt des Menüpunkts ,,Termine" wird zu Beginn des neuen Monats gelöscht.</li>
+            <li><strong>Login:</strong> Unter dem Menüpunkt <q><a href="..\html\login.html">Login</a></q> kannst du dich einloggen. Als Eingeloggter hat man Zugriff auf weitere Funktionalitäten, wie z.B den Notenbereich.</li>
+            <li><strong>Suche:</strong> Unter dem Menüpunkt <q>Suche</q> kann die Webseite nach Suchbegriffen durchsucht werden. Wir bitten Störungen, wie sinnlose Fehlermeldungen, zu entschuldigen!</li>
+        </p>
+        <p>
+          <h5>Externer Lateinmaus-Bereich:</h5>
+            Der externe Lateinmaus-Bereich besteht aus den Internetseiten "<a href="https://learningapps.org/">LearningApps</a>", "<a href="https://pons.com">Pons</a>", "<a href="https://navigium.de">Navigium</a>" und "<a href='https://hermeneus.eu'>Hermeneus</a>".
+            <ul>
+              <li><strong>Learningapps:</strong> LearningApps ist eine Plattform zum Erstellen von kleinen Lernbausteinen. Die Anzahl der aktuell auf der Lateinmaus zur Verfügung gestellten Apps beträgt: 610 Apps (Stand: 13.12.2022; 14:25).</li>
+              <li><strong>Pons:</strong> "Pons" ist ein kostenloses Online-Wörterbuch für verschiedene Sprachen (unter anderem Englisch und Spanisch).</li>
+              <li><strong>Navigium</strong> "Navigium" ist ein kostenloses Online-Wörterbuch für Latein.</li>
+              <li><strong>hermeneus</strong> “hermeneus.eu” bietet beim schriftlichen Übersetzen von lateinischen Texten einige hilfreiche Tools, wie z.B. Satzanlyse, Subjekt- und Prädikatmarkierungen, Anzeige der deutschen Bedeutung der Wörter und vieles mehr an.</li>
+            </ul>
+        </p>     
+      </section>
+    </div>
+    <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
+    <footer>
+      <pre><a href="..\html\impressum.html">Impressum</a>       <a href="..\html\hilfe.html">Hilfe</a>      <a href="https://lateinmausgruppe.netlify.app/index.html#projects">Projekte</a>      <a href="..\html\stand.html">Stand</a></pre>
+      <pre><a href="..\images\logo.jpg"><img src="..\images\logo.jpg" alt="Logo" id="logo" title="Logo"></a>     <a href="..\images\favicon.ico"><img title="Logo2" id="logo2" src="..\images\favicon.ico" alt="Logo2"></a></pre><hr> 
+      <p id="lateinmaus">&#9884<a href="..\index.html" title="Startseite">Lateinmaus</a>&#9884</p>
+    </footer>
+    <div id="topButton">🔼</div>
+</body>
+</html>

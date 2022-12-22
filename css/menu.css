@@ -1,0 +1,223 @@
+/*CSS für das Computermenü*/
+#normalMenu {
+    background-color: #5c2874;
+    padding-bottom: 2%;
+    display: block;
+    z-index: 5;
+    position: fixed;
+    height: 8%;
+}
+
+#normalMenu a {
+    background-color: none;
+    text-decoration: none;
+}
+
+#logolm {
+    position: relative;
+    left: 2.5%;
+    top: 10px;
+    width: 10%;
+    filter:invert(7%);
+}
+
+#logolm a {
+    background-color: none;
+}
+
+#lerninhalte, #news, #termine, #loginButton, #menusearchButton {
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#lerninhalte, #news, #termine {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+#lerninhalte:hover, #news:hover, #termine:hover {
+    color: white;
+}
+
+#lerninhalteContent {
+    position: fixed;
+    top: 10%;
+    background-color: white;
+    left: 15.5%;
+    width: 8.5%;
+    text-align: center;
+    display: none;
+}
+
+.lerninhalte {
+    display: block;
+}
+
+.lerninhalte {
+    background-color: #5c2874;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 50px;
+}
+
+.lerninhalte:hover {
+    color: white;
+    background-color: #5c2874;
+}
+
+#loginButton {
+    background-color: none;
+    border: 1px solid none;
+    border-radius: 10px;
+    color: none;
+    margin-left: 4%;
+    position: relative;
+    top: 8px;
+}
+
+#loginButton a {
+    background-color: inherit;
+}
+
+#loginButton:hover {
+    background-color: none;
+    border-color: none;
+    color: none;
+}
+
+#menusearchButton {
+    background-color: inherit;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#menusearchButton:hover {
+    background-color: none;
+}
+
+/*CSS Links für das Handymenü*/
+#mobileMenu {
+    position: fixed;
+    display: none;
+    background-color:#5c2874;
+    border-bottom: 1px solid #5c2874;
+    padding-bottom: 20%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.mobileMenu {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5%;
+    font-size: 18px;
+    margin-top: 5%;
+    z-index: 5;
+    margin-left: 10%;
+}
+
+.mobileMenu:hover {
+    color: white;
+}
+
+.mobileLerninhalte {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5%;
+}
+
+#mobilelogolm {
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    width: 30%;
+    filter:invert(7%);
+}
+
+#mobileloginButton {
+    font-size: 20px;
+    background-color: none;
+    border: 1px solid #5c2874;
+    border-radius: 10px;
+    color: #5c2874;
+    position: fixed;
+    top: 2.5%;
+    right: 40%;
+}
+
+#mobileMenu a:hover {
+    color: white;
+}
+
+#showMobileMenuButton {
+    position: fixed;
+    right: 3%;
+    top: 2%;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: #5c2874;
+}
+
+#mobilesearchButton {
+    background-color: inherit;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: fixed;
+    right: 20%;
+    top: 2.7%;
+    cursor: pointer;
+}
+
+#mobilesearchButton:hover {
+    background-color: white;
+}
+
+#mobileMenuContent {
+    position: fixed;
+    display: none;
+    left: 50%;
+    right: 0px;
+    top: 9.8%;
+    bottom: 0px;
+    background-color: #5c2874;
+}
+
+#mobileMenuContent a:hover {
+    color: white;
+}
+
+#menüText {
+    text-align: center;
+    color: white
+}
+
+#mobileNews, #mobileAppointments, #mobileImpressum, #mobileHelp, #mobileAboutUs {
+    display: block;
+    margin-top: 20%;
+}
+
+#showNumberOfNews, #showNumberOfAppointments {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    #normalMenu {
+        display: none;
+    }
+    #mobileMenu {
+        display: block;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\allgemein.css"><!--Css-Link für allgemeine Informationen auf der ganzen Seite-->
+    <link rel="stylesheet" href="..\css\menu.css"><!--Css-Link fürs Hauptmenü-->
+    <link rel="stylesheet" href="..\css\footer.css"><!--Css-Link für den Footer-->
+    <link rel="stylesheet" href="..\css\verben.css"><!--Css-Link für den individuellen Hauptteil der Seite-->
+    <link rel="stylesheet" href="..\css\akkordeon.css">
+    <link rel="stylesheet" href="..\css\search.css"><!--Css-Link für den Stil der Suche und der Box-->
+    <title>Lateinmaus - Verben</title>
+    <link rel="icon" type="image/x-icon" href="..\images\favicon.ico"><!--Favicon-->
+    <script src="..\js\akkordeon.js"></script><!--Js-Link für "Auswahlmenu"-->
+    <script src="..\js\search.js"></script><!--Js-Link für Suche-->
+    <script defer src="..\js\allgemein.js"></script>
+    <script defer src="..\js\menu.js"></script>
+    <script defer src="..\js\numberofNewsandAppointments.js"></script>
+  </head>
+<body onload="normalDatum()">
+   <!--Hier beginnt das Hauptmenu, für das der Css-Link im head zuständig ist-->
+   <nav id="normalMenu">
+    <a href="..\index.html" title="Home"><img src="..\images\logo.jpg" alt="Logo" id="logolm"></a>
+    <a href="javascript:void(0)" title="Lerninhalte" id="lerninhalte">Lerninhalte</a>
+    <a href="..\html\news.html" title="News" id="news">News</a>
+    <a href="..\html\termine.html" title="Termine" id="termine">Termine</a>
+    <a href="..\html\login.html" title="Login"><img id="loginButton" src="..\images\login.png"></a>
+    <button id="menusearchButton"  onclick="showAlertBox()" title="Suche">🔍</button>
+</nav>
+<div id="lerninhalteContent">
+<a href="..\html\englisch.html" class="lerninhalte">Englisch</a>
+<a href="..\html\spanisch.html" class="lerninhalte">Spanisch</a>
+<a href="..\html\latein.html" class="lerninhalte">Latein</a>
+<a href="..\html\chemie.html" class="lerninhalte">Chemie</a>
+</div>
+
+<nav id="mobileMenu">
+<a href="..\index.html" title="Home"><img src="..\images\logo.jpg" id="mobilelogolm"></a>
+<a href="..\html\login.html" title="Login"><img id="mobileloginButton" src="..\images\login.png"></a>
+<button id="mobilesearchButton" onclick="showAlertBox()">🔍</button>
+<button id="showMobileMenuButton">&#x2630;</button>
+</nav>
+<div id="mobileMenuContent">
+<h3 id="menüText">MENÜ</h3>
+<h4 class="mobileMenu">Lerninhalte</h4>
+<ul>
+        <li><a href="..\html\englisch.html" class="mobileLerninhalte">Englisch</a></li>
+        <li><a href="..\html\spanisch.html" class="mobileLerninhalte">Spanisch</a></li>
+        <li><a href="..\html\latein.html" class="mobileLerninhalte">Latein</a></li>
+        <li><a href="..\html\chemie.html" class="mobileLerninhalte">Chemie</a></li>
+</ul>
+<a href="..\html\news.html" id="mobileNews" class="mobileMenu">News<font id="showNumberOfNews"></font></a>
+<a href="..\html\termine.html" id="mobileAppointments" class="mobileMenu">Termine<font id="showNumberOfAppointments"></font></a>
+<a href="..\html\impressum.html" id="mobileImpressum" class="mobileMenu">Impressum</a>
+<a href="..\html\hilfe.html" id="mobileHelp" class="mobileMenu">Hilfe</a>
+<a href="https://lateinmausgruppe.netlify.app#about-us" id="mobileAboutUs" class="mobileMenu">Über uns</a>
+</div>
+<div id="alertBox">
+  <input type="button" id="closeBox" onclick="closeAlertBox()" value="X">
+  <input type="search" name="search" id="search" placeholder="Suchbegriff"><br>
+  <input type="button" id="searchButton" onclick="search()" value="&#128269;Suchen">
+  <center><p id="alternativeAlert"></p></center>
+</div>
+<div id="backCanvas"></div>
+<!--Noscript-->
+<noscript id="noScriptConfirmBox">⚠JavaScript ist deaktiviert. Bitte JavaScript aktivieren, um diese Seite normal benutzen zu können!⚠<br><a href="https://praxistipps.chip.de/wie-aktiviere-ich-javascript-und-was-bedeutet-das_9745">»Aktivieren(Anleitung)</a></noscript>
+    <!--Hier beginnt der individuelle Hauptteil der Seite, für den der Css-Link im head zuständig ist-->
+    <div id="main">
+      <br><br><br>
+      <section><br>
+        <button id="oben"><font>Lerninhalte</font> ► <a href="..\html\latein.html">Latein</a> ► <a href="..\html\lateingrammatik.html">Lateingrammatik</a> ► <a href="..\html\lat-verben.html">Verben</a></button>
+      </section><br>
+      <section>
+        <h3 class="verben">Verben</h3>
+        <button class="accordion" onclick="akk()">Regulär</button>
+        <div class="panel">
+          <p>
+            <ul>
+              <li><a href="https://lateinon.de/grammatik/verben/">Grundlegendes</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjugationen/">Konjugationen</a></li>
+              <li><a href="https://lateinon.de/grammatik/personalendung/">Personalendung</a></li>
+              <li><a href="https://lateinon.de/grammatik/imperativ/">Imperativ</a></li>
+            </ul>
+          </p>
+        </div>
+        <button class="accordion" onclick="akk()">Irregulär</button>
+        <div class="panel">
+          <p>
+            <ul>
+              <li><a href="https://lateinon.de/grammatik/esse/">esse</a></li>
+              <li><a href="https://lateinon.de/grammatik/ferre/">ferre</a></li>
+              <li><a href="https://lateinon.de/grammatik/ire/">ire</a></li>
+              <li><a href="https://lateinon.de/grammatik/posse/">posse</a></li>
+              <li><a href="https://lateinon.de/grammatik/prodesse/">prodesse</a></li>
+              <li><a href="https://lateinon.de/grammatik/velle-nolle/">velle + nolle</a></li>
+              <li><a href="https://lateinon.de/grammatik/malle/">malle</a></li>
+              <li><a href="https://lateinon.de/grammatik/fieri/">fieri</a></li>
+            </ul>
+          </p>
+        </div>
+        <button class="accordion" onclick="akk()">Konjunktiv</button>
+        <div class="panel">
+          <p>
+            <ul>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-praesens/">Konjunktiv Präsens</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-imperfekt/">Konjunktiv Imperfekt</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-perfekt/">Konjunktiv Perfekt</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-plusquamperfekt/">Konjunktiv Plusquamperfekt</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-im-hauptsatz/">Konjunktiv im Hauptsatz</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-im-nebensatz/">Konjunktiv im Nebensatz</a></li>
+              <li><a href="https://lateinon.de/grammatik/konjunktiv-im-nebensatz-mit-cum/">Konjunktiv im Nebensatz mit cum</a></li>
+            </ul>
+          </p>
+        </div>
+      </section>
+    </div>
+    <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
+    <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
+    <footer>
+      <pre><a href="..\html\impressum.html">Impressum</a>       <a href="..\html\hilfe.html">Hilfe</a>      <a href="https://lateinmausgruppe.netlify.app/index.html#projects">Projekte</a>      <a href="..\html\stand.html">Stand</a></pre>
+      <pre><a href="..\images\logo.jpg"><img src="..\images\logo.jpg" alt="Logo" id="logo" title="Logo"></a>     <a href="..\images\favicon.ico"><img title="Logo2" id="logo2" src="..\images\favicon.ico" alt="Logo2"></a></pre><hr> 
+      <p id="lateinmaus">&#9884<a href="..\index.html" title="Startseite">Lateinmaus</a>&#9884</p>
+    </footer>
+    <div id="topButton">🔼</div>
+</body>
+</html>

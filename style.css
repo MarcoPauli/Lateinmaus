@@ -1,0 +1,31 @@
+#einführung {
+    margin: 16px;
+}
+#über {
+    text-align: center;
+    color: #5c2874;
+}
+#mappenbild {
+    width: 344.4px;
+    height: 344.4px;
+}
+#para {
+    text-align: center;
+    color: #5c2874;
+}
+
+#latinQuote {
+    background-color: wheat;
+    color: darkred;
+    border: 2px solid saddlebrown;
+    border-radius: 10px;
+    margin: 16px;
+    text-align: center;
+}
+
+#quote {
+    font-family: Papyrus;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+}

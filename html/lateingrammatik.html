@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\allgemein.css"><!--Css-Link für allgemeine Informationen auf der ganzen Seite-->
+    <link rel="stylesheet" href="..\css\menu.css"><!--Css-Link fürs Hauptmenü-->
+    <link rel="stylesheet" href="..\css\footer.css"><!--Css-Link für den Footer-->
+    <link rel="stylesheet" href="..\css\lateingrammatik.css"><!--Css-Link für den individuellen Hauptteil der Seite-->
+    <link rel="stylesheet" href="..\css\akkordeon.css">
+    <link rel="stylesheet" href="..\css\search.css"><!--Css-Link für den Stil der Suche und der Box-->
+    <title>Lateinmaus - Lateingrammatik</title>
+    <link rel="icon" type="image/x-icon" href="..\images\favicon.ico"><!--Favicon-->
+    <script src="..\js\akkordeon.js"></script><!--Js-Link für "Auswahlmenu"-->
+    <script src="..\js\search.js"></script><!--Js-Link für Suche-->
+    <script defer src="..\js\allgemein.js"></script>
+    <script defer src="..\js\menu.js"></script>
+    <script defer src="..\js\numberofNewsandAppointments.js"></script>
+  </head>
+<body onload="normalDatum()">
+   <!--Hier beginnt das Hauptmenu, für das der Css-Link im head zuständig ist-->
+   <nav id="normalMenu">
+    <a href="..\index.html" title="Home"><img src="..\images\logo.jpg" alt="Logo" id="logolm"></a>
+    <a href="javascript:void(0)" title="Lerninhalte" id="lerninhalte">Lerninhalte</a>
+    <a href="..\html\news.html" title="News" id="news">News</a>
+    <a href="..\html\termine.html" title="Termine" id="termine">Termine</a>
+    <a href="..\html\login.html" title="Login"><img id="loginButton" src="..\images\login.png"></a>
+    <button id="menusearchButton"  onclick="showAlertBox()" title="Suche">🔍</button>
+</nav>
+<div id="lerninhalteContent">
+<a href="..\html\englisch.html" class="lerninhalte">Englisch</a>
+<a href="..\html\spanisch.html" class="lerninhalte">Spanisch</a>
+<a href="..\html\latein.html" class="lerninhalte">Latein</a>
+<a href="..\html\chemie.html" class="lerninhalte">Chemie</a>
+</div>
+
+<nav id="mobileMenu">
+<a href="..\index.html" title="Home"><img src="..\images\logo.jpg" id="mobilelogolm"></a>
+<a href="..\html\login.html" title="Login"><img id="mobileloginButton" src="..\images\login.png"></a>
+<button id="mobilesearchButton" onclick="showAlertBox()">🔍</button>
+<button id="showMobileMenuButton">&#x2630;</button>
+</nav>
+<div id="mobileMenuContent">
+<h3 id="menüText">MENÜ</h3>
+<h4 class="mobileMenu">Lerninhalte</h4>
+<ul>
+        <li><a href="..\html\englisch.html" class="mobileLerninhalte">Englisch</a></li>
+        <li><a href="..\html\spanisch.html" class="mobileLerninhalte">Spanisch</a></li>
+        <li><a href="..\html\latein.html" class="mobileLerninhalte">Latein</a></li>
+        <li><a href="..\html\chemie.html" class="mobileLerninhalte">Chemie</a></li>
+</ul>
+<a href="..\html\news.html" id="mobileNews" class="mobileMenu">News<font id="showNumberOfNews"></font></a>
+<a href="..\html\termine.html" id="mobileAppointments" class="mobileMenu">Termine<font id="showNumberOfAppointments"></font></a>
+<a href="..\html\impressum.html" id="mobileImpressum" class="mobileMenu">Impressum</a>
+<a href="..\html\hilfe.html" id="mobileHelp" class="mobileMenu">Hilfe</a>
+<a href="https://lateinmausgruppe.netlify.app#about-us" id="mobileAboutUs" class="mobileMenu">Über uns</a>
+</div>
+<div id="alertBox">
+  <input type="button" id="closeBox" onclick="closeAlertBox()" value="X">
+  <input type="search" name="search" id="search" placeholder="Suchbegriff"><br>
+  <input type="button" id="searchButton" onclick="search()" value="&#128269;Suchen">
+  <center><p id="alternativeAlert"></p></center>
+</div>
+<div id="backCanvas"></div>
+<!--Noscript-->
+<noscript id="noScriptConfirmBox">⚠JavaScript ist deaktiviert. Bitte JavaScript aktivieren, um diese Seite normal benutzen zu können!⚠<br><a href="https://praxistipps.chip.de/wie-aktiviere-ich-javascript-und-was-bedeutet-das_9745">»Aktivieren(Anleitung)</a></noscript>
+    <!--Hier beginnt der individuelle Hauptteil der Seite, für den der Css-Link im head zuständig ist-->
+    <div id="main">
+    <br><br><br>
+      <section><br>
+        <button id="oben"><font>Lerninhalte</font> ► <a href="..\html\latein.html">Latein</a> ► <a href="..\html\lateingrammatik.html">Lateingrammatik</a></button>
+      </section><br>
+      <section>
+        <h3 class="lateingrammatik">Latein - Lateingrammatik</h3>
+        <p class="lateingrammatik">Dies ist eine Schnellübersicht für die lateinische Grammatik.</p>
+        <button class="accordion" onclick="akk()">Substantive</button>
+        <div class="panel">
+          <ul>
+              <li><a href="https://lateinon.de/grammatik/a-deklination/">a-Deklination</a></li>
+              <li><a href="https://lateinon.de/grammatik/o-deklination/">o-Deklination</a></li>
+              <li><a href="https://lateinon.de/grammatik/konsonantische-deklination/">3.Deklination "normal"</a></li>
+              <li><a href="https://lateinon.de/grammatik/gemischte-deklination/">3.Deklination "gemischt"</a></li>
+              <li><a href="https://lateinon.de/grammatik/i-deklination/">3. Deklination "i-Deklination"</a></li>
+              <li><a href="https://lateinon.de/grammatik/e-deklination/">e-Deklination</a></li>
+              <li><a href="https://lateinon.de/grammatik/u-deklination/">u-Deklination</a></li>
+          </ul>
+        </div>
+        <button class="accordion" onclick="akk()">Adjektive</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li><a href="https://lateinon.de/grammatik/adjektive-der-a-o-deklination/">Adjektive der a-/o-Deklination</a></li>
+                <li><a href="https://lateinon.de/grammatik/konsonantische-adjektive/">Adjektive 3. Deklination</a></li>
+                <li><a href="https://lateinon.de/grammatik/steigerungen-von-adjektiven/">Steigerungen von Adjektiven</a></li>
+                <li><a href="https://lateinon.de/grammatik/uebersetzung-von-adjektiven/">Übersetzung von Adjektiven</a></li>
+                <li><a href="https://lateinon.de/grammatik/adverbien/">Adverbien</a></li>
+            </ul>
+          </p>
+        </div>
+        <button class="accordion" onclick="akk()">Fälle</button>
+        <div class="panel">
+          <ul>
+              <li><a href="https://lateinon.de/grammatik/nominativ/">Nominativ (1. Fall)</a></li>
+              <li><a href="https://lateinon.de/grammatik/genitiv/">Genitiv (2. Fall)</a></li>
+              <li><a href="https://lateinon.de/grammatik/dativ/">Dativ (3. Fall)</a></li>
+              <li><a href="https://lateinon.de/grammatik/akkusativ/">Akkusativ (4. Fall)</a></li>
+              <li><a href="https://lateinon.de/grammatik/ablativ/">Ablativ (5. Fall)</a></li>
+              <li><a href="https://lateinon.de/grammatik/vokativ/">Vokativ (6. Fall)</a></li>
+          </ul>
+        </div>
+        <button class="accordion" onclick="akk()">Verben</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li><a href="..\html\lat-verben.html">regulär</a></li>
+                <li><a href="..\html\lat-verben.html">irregulär</a></li>
+                <li><a href="..\html\lat-verben.html">Konjunktiv</a></li>
+                <li><a href="https://lateinon.de/grammatik/infinitive/">Infinitive</a></li>
+                <li><a href="https://lateinon.de/grammatik/deponentien/">Deponentien</a></li>
+                <li><a href="https://lateinon.de/grammatik/semideponentien/">Semideponentien</a></li>
+            </ul>
+          </p>
+        </div>
+        <button class="accordion" onclick="akk()">Wortarten</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li>Substantive(siehe oben)</li>
+                <li>Verben(siehe oben)</li>
+                <li>Adjektive(siehe oben)</a></li>
+                <li><a href="https://lateinon.de/grammatik/adverbien/">Adverbien</a></li>
+                <li><a href="https://learningapps.org/watch?v=pa7bhn3pn21">Pronomina</a></li>
+                <li><a href="https://lateinon.de/grammatik/konjunktionen-subjunktionen/">Konjunktionen und Subjunktionen</a></li>
+                <li><a href="https://lateinon.de/grammatik/praepositionen/">Präpositionen</a></li>
+                <li><a href="https://lateinon.de/grammatik/roemische-lateinische-zahlen/">Römische/Lateinische Zahlen</a></li>
+            </ul>
+          </p>
+        </div>
+        <a href="https://lateinon.de/grammatik/gerundium/"><button class="accordion">Gerundium</button></a>
+        <a href="https://lateinon.de/grammatik/gerundivum/"><button class="accordion">Gerundivum</button></a>
+        <button class="accordion" onclick="akk()">Partizipien</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li><a href="https://lateinon.de/grammatik/ppp/">PPP</a></li>
+                <li><a href="https://lateinon.de/grammatik/ppa/">PPA</a></li>
+                <li><a href="https://lateinon.de/grammatik/pfa/">PFA</a></li>
+            </ul>
+            Für diese Seite ebenfalls relevant: <b>Konstruktionen</b>(siehe unten)
+          </p>
+        </div>
+        <button class="accordion" onclick="akk()">Pronomina</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li><a href="https://lateinon.de/grammatik/demonstrativpronomen/">Demonstrativpronomen</a></li>
+                <li><a href="https://lateinon.de/grammatik/personalpronomen/">Personalpronomen</a></li>
+                <li><a href="https://lateinon.de/grammatik/possessivpronomen/">Possesivpronomen</a></li>
+                <li><a href="https://lateinon.de/grammatik/relativpronomina/">Relativpronomen</a></li>
+                <li><a href="https://lateinon.de/grammatik/indefinitpronomen/">Indefinitpronomen</a></li>
+                <li><a href="https://lateinon.de/grammatik/interrogativpronomen/">Interrogativpronomen</a></li>
+              </ul>
+          </p>
+        </div>
+          <a href="https://lateinon.de/grammatik/latsatz/"><button class="accordion">Der Satz</button></a>
+          <button class="accordion" onclick="akk()">Konstruktionen</button>
+          <div class="panel">
+            <p>
+              <ul>
+                  <li><a href="https://lateinon.de/grammatik/aci/">ACI</a></li>
+                  <li><a href="https://lateinon.de/grammatik/nci/">NCI</a></li>
+                  <li><a href="https://lateinon.de/grammatik/pc/">PC</a></li>
+                  <li><a href="https://lateinon.de/grammatik/ablativus-absolutus/">Ablativus absolutus</a></li>
+                </ul>
+            </p>
+          </div>
+        </section>
+    </div>
+    <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
+    <footer>
+      <pre><a href="..\html\impressum.html">Impressum</a>       <a href="..\html\hilfe.html">Hilfe</a>      <a href="https://lateinmausgruppe.netlify.app/index.html#projects">Projekte</a>      <a href="..\html\stand.html">Stand</a></pre>
+      <pre><a href="..\images\logo.jpg"><img src="..\images\logo.jpg" alt="Logo" id="logo" title="Logo"></a>     <a href="..\images\favicon.ico"><img title="Logo2" id="logo2" src="..\images\favicon.ico" alt="Logo2"></a></pre><hr> 
+      <p id="lateinmaus">&#9884<a href="..\index.html" title="Startseite">Lateinmaus</a>&#9884</p>
+    </footer>
+    <div id="topButton">🔼</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#submit {
+    background-color: white;
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+    border: 2px solid green;
+    border-radius: 100%;
+}
+#submit:hover {
+    background-color: green;
+    color: white;
+    transition-duration: 1ms;
+}
+#login {
+    padding-left: 16px;
+}

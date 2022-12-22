@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\search.css"><!--Css-Link für den Stil der Suche und der Box-->
+    <title>Frank</title>
+    <link rel="stylesheet" href="..\css\menu.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="..\css\frank.css">
+    <link rel="stylesheet" href="..\css\allgemein.css">
+    <link rel="icon" type="image/x-icon" href="..\images\favicon.ico"><!--Favicon-->
+    <script src="..\js\search.js"></script><!--Js-Link für Suche-->
+    <script defer src="..\js\allgemein.js"></script>
+    <script defer src="..\js\gradeAverageCalculator.js"></script>
+    <script defer src="..\js\menu.js"></script>
+    <script defer src="..\js\numberofNewsandAppointments.js"></script>
+</head>
+<body onload="normalDatum()">
+    <nav id="menubar">
+        <a title="Logout" href="..\index.html" id="logout">&#128308;</a>
+        <a title="Start" href="3250dfd00c2fdfad29d199cc42c0d469639d22d3285e0845829e490f202034b1.html" id="user"><img src="..\images\hund.jpg" id="profilbild"></a>
+    </nav>
+    <!--Noscript-->
+<noscript id="noScriptConfirmBox">⚠JavaScript ist deaktiviert. Bitte JavaScript aktivieren, um diese Seite normal benutzen zu können!⚠<br><a href="https://praxistipps.chip.de/wie-aktiviere-ich-javascript-und-was-bedeutet-das_9745">»Aktivieren(Anleitung)</a></noscript>
+    <main>
+        <br><br>
+        <p id="anmeldung">✅Anmeldung erfolgreich!</p>
+        <br>
+        <h1 class="center distance">Willkommen zurück!</h1>
+        <article id="noticeboard"  class="contentBox">
+            <div class="elementHeader">
+            <h2>Schwarzes Brett</h2>
+            </div>
+            <div id="inhalt">
+                <div>
+                    <h3 class="überschriften">Falken</h3>
+                    <p>
+                        <details>
+                            <summary class="hover">Mehr dazu</summary>
+                            <p><a href="..\html\falken.html">Falken</a></p>
+                        </details>
+                    </p>
+                </div>
+            </div>
+        </article><br><br>
+        <article id="arbeitsaufträgeExen" class="contentBox">
+          <div class="elementHeader">
+          <h2>Arbeitsaufträge und Onlinetests</h2>
+          </div>
+          <div id="inhalt">
+              <div>
+                  <h3 class="überschriften">Aktuell sind keine Arbeitsaufträge verfügbar.</h3>
+                  <p>
+                      <!--<details>
+                          <summary class="hover"></summary>
+                          <p>Bearbeite die untenstehenden Arbeitsblätter in der chronologischen Reihenfolge. Verwende die alten Lateinbücher ggf. als Hilfe. Bitte bis nächsten Samstag erledigen.</p>
+                          <ul>
+                            
+                          </ul>
+                      </details>-->
+                  </p>
+              </div>
+          </div>
+      </article><br><br>
+      <article id="lösungTexte" class="contentBox">
+        <div class="elementHeader">
+        <h2>Lösung Texte</h2>
+        </div>
+        <div id="inhalt">
+            <div>
+                <h3 class="überschriften">Neues Lateinbuch:</h3>
+                <p>
+                    <details>
+                        <summary class="hover">Mehr dazu</summary>
+                        <p id="showCurrentLatinText">
+                            <iframe src="https://learningapps.org/watch?v=pm1ibsvrc22" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                        </p>
+                    </details>
+                </p>
+            </div>
+        </div>
+    </article><br><br>
+    <article id="notenbereich"  class="contentBox">
+      <div class="elementHeader">
+      <h2>&#127926; Notenbereich 	&#127926;</h2>
+      </div>
+      <div id="inhalt">
+          <div>
+              <h3 class="überschriften">Aktuelle Noten:</h3>
+              <table>
+                <tr>
+                  <th>Fach</th>
+                  <th>GLN</th>
+                  <th>KLN</th>
+                  <th>Durchschnitt &#216;</th>
+                </tr>
+                <tr>
+                  <td>Englisch</td>
+                  <td id="eGLN"></td>
+                  <td id="eKLN"></td>
+                  <td id="eAverage" style="text-align: center;"></td>
+                </tr>
+                <tr>
+                  <td>Latein</td>
+                  <td id="lGLN"></td>
+                  <td id="lKLN"></td>
+                  <td id="lAverage" style="text-align: center"></td>
+                </tr>
+              </table>
+          </div>
+      </div>
+  </article><br><br>
+    </main>
+    <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
+    <footer>
+      <pre><a href="..\html\impressum.html">Impressum</a>       <a href="..\html\hilfe.html">Hilfe</a>      <a href="https://lateinmausgruppe.netlify.app/index.html#projects">Projekte</a>      <a href="..\html\stand.html">Stand</a></pre>
+      <pre><a href="..\images\logo.jpg"><img src="..\images\logo.jpg" alt="Logo" id="logo" title="Logo"></a>     <a href="..\images\favicon.ico"><img title="Logo2" id="logo2" src="..\images\favicon.ico" alt="Logo2"></a></pre><hr> 
+      <p id="lateinmaus">&#9884<a href="..\index.html" title="Startseite">Lateinmaus</a>&#9884</p>
+    </footer>
+    <div id="topButton">🔼</div>
+      <script>
+        let registration = document.getElementById("anmeldung");
+        setTimeout(function time() {
+            registration.innerHTML = "<br>";
+        }, 1500);
+      </script>
+      <div id="alertBox">
+        <input type="button" id="closeBox" onclick="closeAlertBox()" value="X">
+        <input type="search" name="search" id="search" placeholder="Suchbegriff"><br>
+        <input type="button" id="searchButton" onclick="search()" value="Suchen">
+      </div>
+      <div id="backCanvas"></div>
+</body>
+</html>
