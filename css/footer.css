@@ -1,4 +1,78 @@
+:root {
+    --lateinmaus: #5c2874;
+}
+
+#offersTxt {
+    display: inline;
+}
+
 footer {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: var(--lateinmaus);
+    padding-top: 2%;
+    padding-left: 1%;
+    font-size: 20px;
+    margin-bottom: -100px;
+    padding-bottom: 2%;
+    z-index: 1;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    text-decoration-thickness: 1px;
+    color: whitesmoke;
+}
+
+footer a:hover {
+    transition-duration: 1s;
+    text-decoration: underline;
+}
+
+#footerMenu {
+    text-align: center;
+}
+
+#footerMenu a {
+    margin-right: 10%;
+}
+
+#footerOffers a {
+    margin-right: 3%;
+}
+
+.fa-instagram {
+    background: none;
+    color: rgb(197, 84, 46);
+    text-decoration: none;
+    margin-left: 1%;
+}
+
+#sloganFooter {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+hr {
+    color: goldenrod
+}
+
+#lateinmaus {
+    text-align: center;
+}
+
+#githubLogo {
+    width: 1.5%;
+    margin-left: 1%;
+}
+
+
+
+/*footer {
     background-color: #5c2874;
     margin: 0;
     padding: 10px;
@@ -69,4 +143,4 @@ pre {
 #logo2 {
     width: 30px;
     margin-bottom: 0px;
-}
+}*/

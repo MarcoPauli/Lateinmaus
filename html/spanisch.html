@@ -20,13 +20,29 @@
   </head>
 <body onload="normalDatum()">
    <!--Hier beginnt das Hauptmenu, für das der Css-Link im head zuständig ist-->
-   <nav id="normalMenu">
-    <a href="..\index.html" title="Home"><img src="..\images\logo.jpg" alt="Logo" id="logolm"></a>
-    <a href="javascript:void(0)" title="Lerninhalte" id="lerninhalte">Lerninhalte</a>
-    <a href="..\html\news.html" title="News" id="news">News</a>
-    <a href="..\html\termine.html" title="Termine" id="termine">Termine</a>
-    <a href="..\html\login.html" title="Login"><img id="loginButton" src="..\images\login.png"></a>
-    <button id="menusearchButton"  onclick="showAlertBox()" title="Suche">🔍</button>
+   <nav class="navigationbar">
+    <table class="navTable">
+        <tr class="navRow1">
+            <td class="logo1td" title="Startseite">
+                <a href='/'>
+                <img class="logo1img" id="logo1" src="../images/logo.jpg" alt="Lateinmaus Logo">
+                </a>
+            </td>
+            <td title="Lerninhalte" id="learningContents">
+                <a href="javascript:void(0)">Lerninhalte</a>
+                <div id="showlearningContentsMenu">
+                  <a href="englisch.html" class="lerninhalte">Englisch</a><br><br>
+                  <a href="spanisch.html" class="lerninhalte">Spanisch</a><br><br>
+                  <a href="latein.html" class="lerninhalte">Latein</a><br><br>
+                  <a href="chemie.html" class="lerninhalte">Chemie</a>
+                </div>
+            </td>
+            <td title="News" id="newsNav"><a href='news.html'>News</a></td>
+            <td title="Termine" id="appointmentsNav"><a href='termine.html'>Termine</a></td>
+            <td id="projects" title="Projekte"><a href='projekte.html'>Projekte</a></td>
+            <td title="Theme" id="changeThemeId" class="changeTheme"><button id="changeThemeBtn">🌙</button></td>
+        </tr>
+    </table>
 </nav>
 <div id="lerninhalteContent">
 <a href="..\html\englisch.html" class="lerninhalte">Englisch</a>
@@ -81,10 +97,16 @@
     </div>
     <!--Hier beginnt der Footer, für den auch ein Css-Link im head zuständig ist-->
     <footer>
-      <pre><a href="..\html\impressum.html">Impressum</a>       <a href="..\html\hilfe.html">Hilfe</a>      <a href="https://lateinmausgruppe.netlify.app/index.html#projects">Projekte</a>      <a href="..\html\stand.html">Stand</a></pre>
-      <pre><a href="..\images\logo.jpg"><img src="..\images\logo.jpg" alt="Logo" id="logo" title="Logo"></a>     <a href="..\images\favicon.ico"><img title="Logo2" id="logo2" src="..\images\favicon.ico" alt="Logo2"></a></pre><hr> 
-      <p id="lateinmaus">&#9884<a href="..\index.html" title="Startseite">Lateinmaus</a>&#9884</p>
-    </footer>
-    <div id="topButton">🔼</div>
+      <div id="footerMenu">
+          <a href='impressum.html'>Impressum</a>
+          <a href='hilfe.html'>Hilfe</a>
+          <a href='aboutthat.html'>Über uns</a>
+          <a href="projekte.html">Projekte</a>
+          <a href="stand.html">Stand</a>
+      </div><br>
+      <p id="sloganFooter">⚜️Venit, vidit, rosit⚜️</p>
+      <hr><br>
+      <p id="lateinmaus">2023 Lateinmaus</p>
+  </footer>
 </body>
 </html>

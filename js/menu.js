@@ -1,18 +1,16 @@
 //!!!Code für den Computer!!!
 
-let lerninhalteContent = document.getElementById("lerninhalteContent").style.display = "none";
-let lerninhalte = document.getElementById("lerninhalte");
-lerninhalte.addEventListener("click", showLerninhalteContent);
-function showLerninhalteContent () {
-    let x = lerninhalteContent;
-    if (x == "none") {
-        document.getElementById("lerninhalteContent").style.display = "block";
-        x = "block";
-    } else if (x == "block") {
-        document.getElementById("lerninhalteContent").style.display = "none";
-        x = "none";
-    }
-    return lerninhalteContent = x;
+let learningContents = document.getElementById("learningContents");
+let showlearningContentsMenu = document.getElementById("showlearningContentsMenu");
+learningContents.addEventListener("mouseover", showOffersNavFunc);
+learningContents.addEventListener("mouseleave", removeOffersNavFunc);
+
+function showOffersNavFunc() {
+    showlearningContentsMenu.style.display = "block";
+}
+
+function removeOffersNavFunc() {
+    showlearningContentsMenu.style.display = "none";
 }
 
 //!!!Code fürs Handy!!!
